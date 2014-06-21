@@ -1,0 +1,6 @@
+LICENSE
+setup.py
+README.md
+requirements.txt
+coinmarketcap/core.py
+coinmarketcap/__init__.py
