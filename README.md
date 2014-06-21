@@ -1,4 +1,4 @@
-<img src="https://raw.github.com/c0ding/coinmarketcap/master/doc/coinmarketcap.png" alt="coinmarketcap" title="coinmarketcap">
+<img src="https://raw.githubusercontent.com/c0ding/coinmarketcap-api/master/doc/coinmarketcap.png" alt="coinmarketcap" title="coinmarketcap">
 
 [![PyPi Version](http://img.shields.io/pypi/v/coinmarketcap.svg)](https://pypi.python.org/pypi/coinmarketcap/)   [![Downloads](http://img.shields.io/pypi/dm/coinmarketcap.svg)](https://pypi.python.org/pypi/coinmarketcap/)
 
