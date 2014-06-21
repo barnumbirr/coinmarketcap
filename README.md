@@ -1,4 +1,4 @@
-<h1><img src="https://raw.githubusercontent.com/c0ding/coinmarketcap-api/master/doc/coinmarketcap.png" height=55 alt="coinmarketcap" title="coinmarketcap"> coinmarketcap-api</h1>
+<h1><img src="https://raw.githubusercontent.com/c0ding/coinmarketcap-api/master/doc/coinmarketcap.png" height=75 alt="coinmarketcap" title="coinmarketcap"> coinmarketcap-api</h1>
 
 [![PyPi Version](http://img.shields.io/pypi/v/coinmarketcap.svg)](https://pypi.python.org/pypi/coinmarketcap/)   [![Downloads](http://img.shields.io/pypi/dm/coinmarketcap.svg)](https://pypi.python.org/pypi/coinmarketcap/)
 
@@ -14,8 +14,6 @@ From source use
 or install from PyPi
 
     $ pip install coinmarketcap
-
-
 
 ## License:
 
