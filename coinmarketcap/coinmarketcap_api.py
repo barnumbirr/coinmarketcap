@@ -4,9 +4,10 @@
 from coinmarketcap_utils import coin_info
 from coinmarketcap_utils import update_info
 from coinmarketcap_utils import market_cap_info
+from coinmarketcap_utils import total_currencies_info
 
 __title__   = 'coinmarketcap'
-__version__ = '0.1'
+__version__ = '0.2'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/coinmarketcap-api'
 __license__ = 'Apache v2.0 License'
@@ -52,3 +53,7 @@ def last_updated():
 	
 def total_market_cap():
 	return market_cap_info()[1] + market_cap_info()[2]
+
+
+def total_currencies():
+	return total_currencies_info()

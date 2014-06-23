@@ -83,6 +83,13 @@ Last updated: Jun 22, 2014  3:45 PM UTC
 Total Market Cap: $ 8,408,262,217
 ```
 
+  - Total currencies available:
+
+```
+>>> coinmarketcap.total_currencies()
+344 Currencies
+```
+
 ## License:
 
 ```

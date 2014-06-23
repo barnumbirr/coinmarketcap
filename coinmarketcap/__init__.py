@@ -11,7 +11,7 @@
 #                                                              |_|       
 
 __title__   = 'coinmarketcap'
-__version__ = '0.1'
+__version__ = '0.2'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/coinmarketcap-api'
 __license__ = 'Apache v2.0 License'
@@ -19,5 +19,5 @@ __license__ = 'Apache v2.0 License'
 import coinmarketcap_utils
 from coinmarketcap_api import (
 	about, rank, name, market_cap, price, total_coins, market_volume, market_cap_change,
-	last_updated, total_market_cap
+	last_updated, total_market_cap, total_currencies_info
 )
