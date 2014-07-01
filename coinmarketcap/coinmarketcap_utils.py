@@ -4,7 +4,7 @@
 import lxml.html
 
 __title__   = 'coinmarketcap'
-__version__ = '0.2'
+__version__ = '0.3'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/coinmarketcap-api'
 __license__ = 'Apache v2.0 License'

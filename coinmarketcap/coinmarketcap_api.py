@@ -7,7 +7,7 @@ from coinmarketcap_utils import market_cap_info
 from coinmarketcap_utils import total_currencies_info
 
 __title__   = 'coinmarketcap'
-__version__ = '0.2'
+__version__ = '0.3'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/coinmarketcap-api'
 __license__ = 'Apache v2.0 License'
@@ -35,7 +35,7 @@ def price(PARAMETER):
 	return coin_info(PARAMETER)[3]
 
 
-def total_coins(PARAMETER):
+def coin_supply(PARAMETER):
 	return coin_info(PARAMETER)[4]
 
 
@@ -57,3 +57,12 @@ def total_market_cap():
 
 def total_currencies():
 	return total_currencies_info()
+	
+def coin_summary(PARAMETER):
+	keys = ['name', 'rank', 'market_cap', 'market_volume', 'market_cap_change', 'price', 'coin_supply']
+	values = [name(PARAMETER), rank(PARAMETER), market_cap(PARAMETER), market_volume(PARAMETER), market_cap_change(PARAMETER), 
+	price(PARAMETER), coin_supply(PARAMETER)]
+	coin_summary_info = {}
+	for i in range(len(keys)):
+	    coin_summary_info[keys[i]] = values[i]
+	return coin_summary_info

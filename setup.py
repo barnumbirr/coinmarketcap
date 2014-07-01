@@ -5,7 +5,7 @@ from distutils.core import setup
 
 setup(
     name = 'coinmarketcap',
-    version = '0.2',
+    version = '0.3',
     url = 'https://github.com/c0ding/coinmarketcap-api',
     download_url = 'https://github.com/c0ding/coinmarketcap-api/archive/master.zip',
     author = 'c0ding',

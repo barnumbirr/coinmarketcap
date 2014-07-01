@@ -69,6 +69,21 @@ $ 10,744,269
 +0.79 %
 ```
 
+  - Coin summary:
+
+```
+>>> coinmarketcap.coin_summary('btc')
+{
+    "market_cap": "$ 8,401,445,207",
+    "name": "Bitcoin",
+    "price": "$ 647.75",
+    "rank": "1",
+    "coin_supply": "12,970,100 BTC",
+    "market_cap_change": "+1.39 %",
+    "market_volume": "$ 37,689,775"
+}
+```
+
   - Last update:
 
 ```

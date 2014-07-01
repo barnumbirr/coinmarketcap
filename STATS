@@ -1,32 +1,32 @@
   
    Analyzing: https://github.com/c0ding/coinmarketcap/blob/master/coinmarketcap/coinmarketcap_api.py
 
-              Total Lines: 59
+              Total Lines: 68
 
-               Code Lines: 32 (54.2372%)
-              Blank Lines: 25 (42.3728%)
+               Code Lines: 40 (58.8235%)
+              Blank Lines: 26 (38.2352%)
 
-            Comment Lines: 1 (1.69491%)
-         Doc String Lines: 1 (1.69491%)
+            Comment Lines: 1 (1.47058%)
+         Doc String Lines: 1 (1.47058%)
           Inline Comments: 1
               Doc Strings: 1
            Total Comments: 3
 
-        Longest Code Line: 111
-       Shortest Code Line: 19 [__version__ = '0.2']
+        Longest Code Line: 124
+       Shortest Code Line: 19 [__version__ = '0.3']
 
      Longest Comment Line: 23
     Shortest Comment Line: 23 [# -*- coding: utf-8 ...]
 
                   Imports: 4
-                Functions: 11
+                Functions: 12
                   Classes: 0
             If Statements: 0
            Try Statements: 0
         Except Statements: 0
          Print Statements: 0
-              Assignments: 5
-                Variables: 2
+              Assignments: 9
+                Variables: 5
 
 
   Done analyzing: https://github.com/c0ding/coinmarketcap/blob/master/coinmarketcap/coinmarketcap_api.py
