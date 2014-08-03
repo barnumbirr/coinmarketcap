@@ -23,62 +23,69 @@ This API can currently retrieve the following data from [coinmarketcap](http://c
 
 ```
 >>> import coinmarketcap
->>> coinmarketcap.rank('btc')
+>>> coinmarketcap.rank('bitcoin')
 1
 ```
 
   - Name:
 
 ```
->>> coinmarketcap.name('btc')
+>>> coinmarketcap.name('bitcoin')
 Bitcoin
+```
+
+  - Symbol:
+
+```
+>>> coinmarketcap.short('bitcoin')
+BTC
 ```
 
   - Market capitalization (last 24h):
 
 ```
->>> coinmarketcap.market_cap('btc')
+>>> coinmarketcap.market_cap('bitcoin')
 $ 7,768,506,597
 ```
 
   - Price:
 
 ```
->>> coinmarketcap.price('btc')
+>>> coinmarketcap.price('bitcoin')
 $ 600.77
 ```
 
   - Total coins:
 
 ```
->>> coinmarketcap.total_coins('btc')
-12,930,825 BTC
+>>> coinmarketcap.total_coins('bitcoin')
+12,930,825 bitcoin
 ```
 
   - Market Volume:
 
 ```
->>> coinmarketcap.market_volume('btc')
+>>> coinmarketcap.market_volume('bitcoin')
 $ 10,744,269
 ```
 
   - Market capitalization change (last 24h):
 
 ```
->>> coinmarketcap.market_cap_change('btc')
+>>> coinmarketcap.market_cap_change('bitcoin')
 +0.79 %
 ```
 
   - Coin summary:
 
 ```
->>> coinmarketcap.coin_summary('btc')
+>>> coinmarketcap.coin_summary('bitcoin')
 {
     "market_cap": "$ 8,401,445,207",
     "name": "Bitcoin",
     "price": "$ 647.75",
     "rank": "1",
-    "coin_supply": "12,970,100 BTC",
+    "coin_supply": "12,970,100 bitcoin",
     "market_cap_change": "+1.39 %",
     "market_volume": "$ 37,689,775"
 }
