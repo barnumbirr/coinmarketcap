@@ -36,12 +36,12 @@
 
   Analyzing: https://github.com/c0ding/coinmarketcap/blob/master/coinmarketcap/coinmarketcap_utils.py
 
-              Total Lines: 39
+              Total Lines: 42
 
-               Code Lines: 28 (71.7948%)
-              Blank Lines: 10 (25.6410%)
+               Code Lines: 31 (73.8095%)
+              Blank Lines: 10 (23.8095%)
 
-            Comment Lines: 1 (2.56410%)
+            Comment Lines: 1 (2.38095%)
          Doc String Lines: 0 (0.0%)
           Inline Comments: 1
               Doc Strings: 0
@@ -56,12 +56,12 @@
                   Imports: 3
                 Functions: 4
                   Classes: 0
-            If Statements: 0
+            If Statements: 1
            Try Statements: 0
         Except Statements: 0
          Print Statements: 0
-              Assignments: 16
-                Variables: 10
+              Assignments: 17
+                Variables: 11
 
 
   Done analyzing: https://github.com/c0ding/coinmarketcap/blob/master/coinmarketcap/coinmarketcap_utils.py

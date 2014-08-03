@@ -6,7 +6,7 @@ import urllib
 import lxml.html
 
 __title__   = 'coinmarketcap'
-__version__ = '0.4'
+__version__ = '0.4.1'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/coinmarketcap-api'
 __license__ = 'Apache v2.0 License'
@@ -18,6 +18,9 @@ def coin_info(PARAMETER):
 	tree = raw_data.xpath('//tr[@id="id-' + PARAMETER + '"]/td//text()')
 	clean_space = map(lambda x: x.strip(), tree)
 	coin_details = [x for x in clean_space if x]
+	unwanted_char = '*'
+	if unwanted_char in coin_details:
+		coin_details.remove(unwanted_char)
 	return coin_details
 
 
