@@ -45,35 +45,49 @@ BTC
 
 ```
 >>> coinmarketcap.market_cap('bitcoin')
-$ 7,768,506,597
+$ 7,644,402,276
 ```
 
   - Price:
 
 ```
 >>> coinmarketcap.price('bitcoin')
-$ 600.77
+$ 583.77
 ```
 
   - Total coins:
 
 ```
->>> coinmarketcap.total_coins('bitcoin')
-12,930,825 bitcoin
+>>> coinmarketcap.coin_supply('bitcoin')
+13,094,775
 ```
 
   - Market Volume:
 
 ```
 >>> coinmarketcap.market_volume('bitcoin')
-$ 10,744,269
+$ 8,122,070
 ```
 
-  - Market capitalization change (last 24h):
+  - Market capitalization change (1 hour):
 
 ```
->>> coinmarketcap.market_cap_change('bitcoin')
-+0.79 %
+>>> coinmarketcap.cap_change_1h('bitcoin')
+0.17 %
+```
+
+  - Market capitalization change (24 hours):
+
+```
+>>> coinmarketcap.cap_change_24h('bitcoin')
+-1.07 %
+```
+
+  - Market capitalization change (7 days):
+
+```
+>>> coinmarketcap.cap_change_7d('bitcoin')
+-2.10 %
 ```
 
   - Coin summary:
@@ -81,35 +95,39 @@ $ 10,744,269
 ```
 >>> coinmarketcap.coin_summary('bitcoin')
 {
-    "market_cap": "$ 8,401,445,207",
-    "name": "Bitcoin",
-    "price": "$ 647.75",
-    "rank": "1",
-    "coin_supply": "12,970,100 bitcoin",
-    "market_cap_change": "+1.39 %",
-    "market_volume": "$ 37,689,775"
+    "cap_change_1h": "0.17 %", 
+    "market_cap": "$ 7,644,402,276", 
+    "name": "Bitcoin", 
+    "price": "$ 583.77", 
+    "rank": "1", 
+    "short": "BTC", 
+    "coin_supply": "13,094,775", 
+    "market_volume": "$ 8,122,070", 
+    "cap_change_7d": "-2.10 %", 
+    "cap_change_24h": "-1.07 %"
 }
+
 ```
 
   - Last update:
 
 ```
 >>> coinmarketcap.last_updated()
-Last updated: Jun 22, 2014  3:45 PM UTC
+Last updated: Aug 03, 2014  9:05 AM UTC
 ```
 
   - Total market capitalization:
 
 ```
 >>> coinmarketcap.total_market_cap()
-Total Market Cap: $ 8,408,262,217
+Total Market Cap: $ 8,191,266,103
 ```
 
-  - Total currencies available:
+  - Coinmarketcap stats:
 
 ```
->>> coinmarketcap.total_currencies()
-344 Currencies
+>>> coinmarketcap.stats()
+451 Currencies / 1243 Markets
 ```
 
 ## License:
