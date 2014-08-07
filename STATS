@@ -1,29 +1,29 @@
   
    Analyzing: https://github.com/c0ding/coinmarketcap/blob/master/coinmarketcap/coinmarketcap_api.py
 
-              Total Lines: 83
+              Total Lines: 92
 
-               Code Lines: 49 (59.0361%)
-              Blank Lines: 32 (38.5542%)
+               Code Lines: 55 (59.7826%)
+              Blank Lines: 35 (38.0434%)
 
-            Comment Lines: 1 (1.20481%)
-         Doc String Lines: 1 (1.20481%)
+            Comment Lines: 1 (1.08695%)
+         Doc String Lines: 1 (1.08695%)
           Inline Comments: 1
               Doc Strings: 1
            Total Comments: 3
 
         Longest Code Line: 111
-       Shortest Code Line: 19 [__version__ = '0.4']
+       Shortest Code Line: 13 [return 'true']
 
      Longest Comment Line: 23
     Shortest Comment Line: 23 [# -*- coding: utf-8 ...]
 
                   Imports: 4
-                Functions: 15
+                Functions: 16
                   Classes: 0
-            If Statements: 0
-           Try Statements: 0
-        Except Statements: 0
+            If Statements: 1
+           Try Statements: 1
+        Except Statements: 1
          Print Statements: 0
               Assignments: 9
                 Variables: 5
@@ -36,12 +36,12 @@
 
   Analyzing: https://github.com/c0ding/coinmarketcap/blob/master/coinmarketcap/coinmarketcap_utils.py
 
-              Total Lines: 42
+              Total Lines: 44
 
-               Code Lines: 31 (73.8095%)
-              Blank Lines: 10 (23.8095%)
+               Code Lines: 33 (75.0%)
+              Blank Lines: 10 (22.7272%)
 
-            Comment Lines: 1 (2.38095%)
+            Comment Lines: 1 (2.27272%)
          Doc String Lines: 0 (0.0%)
           Inline Comments: 1
               Doc Strings: 0
@@ -60,8 +60,8 @@
            Try Statements: 0
         Except Statements: 0
          Print Statements: 0
-              Assignments: 17
-                Variables: 11
+              Assignments: 18
+                Variables: 12
 
 
   Done analyzing: https://github.com/c0ding/coinmarketcap/blob/master/coinmarketcap/coinmarketcap_utils.py

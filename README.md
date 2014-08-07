@@ -90,6 +90,13 @@ $ 8,122,070
 -2.10 %
 ```
 
+  - Mineable:
+
+```
+>>> coinmarketcap.mineable('bitcoin')
+true
+```
+
   - Coin summary:
 
 ```
@@ -100,7 +107,8 @@ $ 8,122,070
     "name": "Bitcoin", 
     "price": "$ 583.77", 
     "rank": "1", 
-    "short": "BTC", 
+    "short": "BTC",
+    "mineable": "true",
     "coin_supply": "13,094,775", 
     "market_volume": "$ 8,122,070", 
     "cap_change_7d": "-2.10 %", 
