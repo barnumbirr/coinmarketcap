@@ -10,15 +10,19 @@
 #                                                              | |    
 #                                                              |_|       
 
+
 __title__   = 'coinmarketcap'
-__version__ = '0.5'
+__version__ = '0.6'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/coinmarketcap-api'
 __license__ = 'Apache v2.0 License'
 
+
 import coinmarketcap_utils
+
+
 from coinmarketcap_api import (
 	about, rank, name, short, market_cap, price, coin_supply, market_volume,
-	cap_change_1h, cap_change_24h, cap_change_7d, mineable, last_updated,
-	total_market_cap, stats, coin_summary
+	cap_change_1h, cap_change_24h, cap_change_7d, mineable, premined, 
+	last_updated, total_market_cap, stats, coin_summary
 )

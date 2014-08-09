@@ -6,8 +6,9 @@ from coinmarketcap_utils import update_info
 from coinmarketcap_utils import market_cap_info
 from coinmarketcap_utils import coinmarketcap_info
 
+
 __title__   = 'coinmarketcap'
-__version__ = '0.5'
+__version__ = '0.6'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/coinmarketcap-api'
 __license__ = 'Apache v2.0 License'
@@ -63,8 +64,20 @@ def mineable(PARAMETER):
 	try:
 		if coin_info(PARAMETER)[10] == '*':
 			return 'false'
+		if coin_info(PARAMETER)[10] == '**':
+			return 'true'
 	except IndexError:
 		return 'true'
+
+		
+def premined(PARAMETER):
+	try:
+		if coin_info(PARAMETER)[10] == '**':
+			return 'true'
+		if coin_info(PARAMETER)[10] == '*':
+			return 'false'
+	except IndexError:
+		return 'false'
 
 
 def last_updated():
@@ -82,10 +95,11 @@ def stats():
 
 def coin_summary(PARAMETER):
 	keys = ['name', 'rank', 'short', 'market_cap', 'market_volume', 'cap_change_1h',\
-	'cap_change_24h', 'cap_change_7d', 'price', 'coin_supply', 'mineable']
+	'cap_change_24h', 'cap_change_7d', 'price', 'coin_supply', 'mineable', 'premined']
 	values = [name(PARAMETER), rank(PARAMETER), short(PARAMETER), market_cap(PARAMETER),\
 	market_volume(PARAMETER), cap_change_1h(PARAMETER), cap_change_24h(PARAMETER),\
-	cap_change_7d(PARAMETER), price(PARAMETER), coin_supply(PARAMETER), mineable(PARAMETER)]
+	cap_change_7d(PARAMETER), price(PARAMETER), coin_supply(PARAMETER), mineable(PARAMETER),\
+	premined(PARAMETER)]
 	coin_summary_info = {}
 	for i in range(len(keys)):
 	    coin_summary_info[keys[i]] = values[i]

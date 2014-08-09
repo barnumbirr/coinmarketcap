@@ -97,12 +97,20 @@ $ 8,122,070
 true
 ```
 
+  - Premined:
+
+```
+>>> coinmarketcap.premined('bitcoin')
+false
+```
+
   - Coin summary:
 
 ```
 >>> coinmarketcap.coin_summary('bitcoin')
 {
-    "cap_change_1h": "0.17 %", 
+    "cap_change_1h": "0.17 %",
+    "premine": false 
     "market_cap": "$ 7,644,402,276", 
     "name": "Bitcoin", 
     "price": "$ 583.77", 
