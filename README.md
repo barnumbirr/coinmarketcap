@@ -143,7 +143,7 @@ Total Market Cap: $ 8,191,266,103
 
 ```
 >>> coinmarketcap.stats()
-451 Currencies / 1243 Markets
+501 Currencies / 1532 Markets / 28 Assets
 ```
 
 ## License:
