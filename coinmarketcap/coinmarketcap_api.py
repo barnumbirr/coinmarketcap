@@ -8,7 +8,7 @@ from coinmarketcap_utils import coinmarketcap_info
 
 
 __title__   = 'coinmarketcap'
-__version__ = '0.6'
+__version__ = '0.6.1'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/coinmarketcap-api'
 __license__ = 'Apache v2.0 License'
@@ -89,8 +89,9 @@ def total_market_cap():
 
 
 def stats():
-	return str(coinmarketcap_info()['active_crypto_currencies']) + ' Currencies / '\
-	+ str(coinmarketcap_info()['active_markets']) + ' Markets'
+	return str(coinmarketcap_info()['active_currencies']) + ' Currencies / '\
+	+ str(coinmarketcap_info()['active_markets']) + ' Markets / ' \
+	+ str(coinmarketcap_info()['active_assets']) + ' Assets'
 
 
 def coin_summary(PARAMETER):

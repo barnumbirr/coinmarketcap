@@ -1,13 +1,13 @@
   
    Analyzing: https://github.com/c0ding/coinmarketcap/blob/master/coinmarketcap/coinmarketcap_api.py
 
-              Total Lines: 106
+              Total Lines: 107
 
-               Code Lines: 66 (62.2641%)
-              Blank Lines: 38 (35.8490%)
+               Code Lines: 67 (62.6168%)
+              Blank Lines: 38 (35.5140%)
 
-            Comment Lines: 1 (0.94339%)
-         Doc String Lines: 1 (0.94339%)
+            Comment Lines: 1 (0.93457%)
+         Doc String Lines: 1 (0.93457%)
           Inline Comments: 1
               Doc Strings: 1
            Total Comments: 3
