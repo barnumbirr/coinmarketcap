@@ -20,11 +20,11 @@ def check_table():
 	data = page.xpath('//tr/th//text()')
 	result = cmp(expected_result, data)
 	return result
-	
+
 class coinmarketcaptestsuite(unittest.TestCase):
-	
+
 	_multiprocess_can_split_ = True
-	
+
 	def test_check_table(self):
 		check_table()
 		assert check_table() is 0
