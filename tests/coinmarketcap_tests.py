@@ -8,7 +8,7 @@ import unittest
 from lxml.html import parse
 
 __title__   = 'coinmarketcap'
-__version__ = '0.6.1'
+__version__ = '0.7'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/coinmarketcap-api'
 __license__ = 'Apache v2.0 License'

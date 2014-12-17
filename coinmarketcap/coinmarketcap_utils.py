@@ -1,20 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import re
 import json
 import urllib
 import lxml.html
 
-
 __title__   = 'coinmarketcap'
-__version__ = '0.6.1'
+__version__ = '0.7'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/coinmarketcap-api'
 __license__ = 'Apache v2.0 License'
 
-
 ENTRY_POINT_URL = 'http://coinmarketcap.com/all.html'
-
 
 def coin_info(PARAMETER):
 	raw_data = lxml.html.parse(ENTRY_POINT_URL)
@@ -32,6 +30,14 @@ def coin_info(PARAMETER):
 		premine_index = len(coin_details)
 		coin_details.insert(premine_index, premine_char)
 	return coin_details
+
+
+def top_currencies(PARAMETER):
+	raw_data = lxml.html.parse(ENTRY_POINT_URL)
+	row = raw_data.xpath('//tr/td[@class="no-wrap currency-name"]//text()')
+	regex = re.compile("(?:[^\n]*(\n+))+")
+	currencies_list = filter(lambda i: not regex.search(i), row)
+	return currencies_list[:PARAMETER]
 
 
 def update_info():

@@ -90,6 +90,13 @@ $ 8,122,070
 -2.10 %
 ```
 
+  - List top 'n' currencies (by market capitalization):
+
+```
+>>> coinmarketcap.top('10')
+['Bitcoin', 'Ripple', 'Litecoin', 'BitShares', 'Dogecoin', 'Nxt', 'Peercoin', 'Stellar', 'Counterparty', 'Darkcoin']
+```
+
   - Mineable:
 
 ```
