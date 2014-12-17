@@ -22,19 +22,19 @@ def about():
 def rank(PARAMETER):
 	return coin_info(PARAMETER)[0]
 
-	
+
 def name(PARAMETER):
 	return coin_info(PARAMETER)[1]
 
-	
+
 def short(PARAMETER):
 	return coin_info(PARAMETER)[2]
-	
+
 
 def market_cap(PARAMETER):
 	return coin_info(PARAMETER)[3]
 
-	
+
 def price(PARAMETER):
 	return coin_info(PARAMETER)[4]
 
@@ -62,6 +62,7 @@ def cap_change_7d(PARAMETER):
 def top(PARAMETER):
 	return top_currencies(PARAMETER)
 
+
 def mineable(PARAMETER):
 	try:
 		if coin_info(PARAMETER)[10] == '*':
@@ -71,7 +72,7 @@ def mineable(PARAMETER):
 	except IndexError:
 		return 'true'
 
-		
+
 def premined(PARAMETER):
 	try:
 		if coin_info(PARAMETER)[10] == '**':
@@ -85,7 +86,7 @@ def premined(PARAMETER):
 def last_updated():
 	return update_info()[0]
 
-	
+
 def total_market_cap():
 	return market_cap_info()[1] + market_cap_info()[2]
 
@@ -105,5 +106,5 @@ def coin_summary(PARAMETER):
 	premined(PARAMETER)]
 	coin_summary_info = {}
 	for i in range(len(keys)):
-	    coin_summary_info[keys[i]] = values[i]
+		coin_summary_info[keys[i]] = values[i]
 	return coin_summary_info
