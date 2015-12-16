@@ -3,13 +3,18 @@
 
 import re
 import json
-import urllib
+try:
+    # For Python 3.0 and later
+    from urllib.request import urlopen
+except ImportError:
+    # Fall back to Python 2's urllib2
+    from urllib2 import urlopen
 import lxml.html
 
 __title__   = 'coinmarketcap'
 __version__ = '0.7'
-__author__  = '@c0ding'
-__repo__    = 'https://github.com/c0ding/coinmarketcap-api'
+__author__ = 'Martin Simon <me@martinsimon.me>'
+__repo__    = 'https://github.com/mrsmn/coinmarketcap-api'
 __license__ = 'Apache v2.0 License'
 
 ENTRY_POINT_URL = 'http://coinmarketcap.com/all.html'
@@ -53,6 +58,6 @@ def market_cap_info():
 
 
 def coinmarketcap_info():
-	raw_data = urllib.urlopen('http://coinmarketcap.com/static/generated_pages/global/stats.json')
+	raw_data = urlopen('http://coinmarketcap.com/static/generated_pages/global/stats.json')
 	coinmarketcap_details = json.load(raw_data)
 	return coinmarketcap_details
