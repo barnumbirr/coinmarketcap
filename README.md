@@ -2,8 +2,7 @@
 
 [![PyPi Version](http://img.shields.io/pypi/v/coinmarketcap.svg)](https://pypi.python.org/pypi/coinmarketcap/)   [![Downloads](http://img.shields.io/pypi/dm/coinmarketcap.svg)](https://pypi.python.org/pypi/coinmarketcap/)
 
-
-**coinmarketcap** is an APACHE licensed library written in Python designed to provide a simple to use API for [coinmarketcap](http://coinmarketcap.com/). As coinmarketcap does not provide any API endpoints, this code is pretty dirty.
+**coinmarketcap** is an APACHE licensed library written in Python designed to provide a simple to use API for [coinmarketcap](http://coinmarketcap.com/). As coinmarketcap does not provide any API endpoints, this code is pretty dirty. Tested on Python 2.7.11 and 3.4.2.
 
 ## Installation:
 

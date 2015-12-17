@@ -12,7 +12,7 @@ expected_result = ['#', 'Name', 'Symbol', 'Market Cap', 'Price', 'Available Supp
 def check_table():
 	page = parse("http://coinmarketcap.com/all.html")
 	data = page.xpath('//tr/th//text()')
-	result = cmp(expected_result, data)
+	result = ((expected_result > data) - (expected_result < data))
 	return result
 
 class coinmarketcaptestsuite(unittest.TestCase):

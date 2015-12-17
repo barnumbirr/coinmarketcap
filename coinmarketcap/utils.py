@@ -7,8 +7,8 @@ try:
     # For Python 3.0 and later
     from urllib.request import urlopen
 except ImportError:
-    # Fall back to Python 2's urllib2
-    from urllib2 import urlopen
+    # Fall back to Python 2's urllib
+    from urllib import urlopen
 import lxml.html
 
 ENTRY_POINT_URL = 'http://coinmarketcap.com/all.html'
@@ -30,28 +30,24 @@ def coin_info(PARAMETER):
 		coin_details.insert(premine_index, premine_char)
 	return coin_details
 
-
 def top_currencies(PARAMETER):
 	raw_data = lxml.html.parse(ENTRY_POINT_URL)
 	row = raw_data.xpath('//tr/td[@class="no-wrap currency-name"]//text()')
 	regex = re.compile("(?:[^\n]*(\n+))+")
-	currencies_list = filter(lambda i: not regex.search(i), row)
+	currencies_list = list(filter(lambda i: not regex.search(i), row))
 	return currencies_list[:PARAMETER]
-
 
 def update_info():
 	raw_data = lxml.html.parse(ENTRY_POINT_URL)
 	update_details = raw_data.xpath("//p[@class='small']//text()")
 	return update_details
 
-
 def market_cap_info():
 	raw_data = lxml.html.parse(ENTRY_POINT_URL)
 	market_cap_details = raw_data.xpath("//div[@id='total_market_cap']//text()")
 	return market_cap_details
 
-
 def coinmarketcap_info():
-	raw_data = urlopen('http://coinmarketcap.com/static/generated_pages/global/stats.json')
-	coinmarketcap_details = json.load(raw_data)
+	raw_data = urlopen('http://coinmarketcap.com/static/generated_pages/global/stats.json').read().decode('utf-8')
+	coinmarketcap_details = json.loads(raw_data)
 	return coinmarketcap_details
