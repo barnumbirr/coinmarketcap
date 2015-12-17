@@ -2,6 +2,6 @@ STATS
 COPYING
 setup.py
 README.md
+coinmarketcap/core.py
+coinmarketcap/utils.py
 coinmarketcap/__init__.py
-coinmarketcap/coinmarketcap_api.py
-coinmarketcap/coinmarketcap_utils.py

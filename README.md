@@ -1,10 +1,8 @@
 <h1><img src="https://raw.githubusercontent.com/c0ding/coinmarketcap-api/master/doc/coinmarketcap.png" height=85 alt="coinmarketcap" title="coinmarketcap">coinmarketcap-api</h1>
 
 [![PyPi Version](http://img.shields.io/pypi/v/coinmarketcap.svg)](https://pypi.python.org/pypi/coinmarketcap/)   [![Downloads](http://img.shields.io/pypi/dm/coinmarketcap.svg)](https://pypi.python.org/pypi/coinmarketcap/)
-[![Code Health](https://landscape.io/github/c0ding/coinmarketcap-api/master/landscape.svg)](https://landscape.io/github/c0ding/coinmarketcap-api/master)
 
-
-**coinmarketcap** is an APACHE licensed library written in Python designed to provide a simple to use API for [coinmarketcap](http://coinmarketcap.com/). As coinmarketcap does not provide any API endpoints, this code is pretty dirty.
+**coinmarketcap** is an APACHE licensed library written in Python designed to provide a simple to use API for [coinmarketcap](http://coinmarketcap.com/). As coinmarketcap does not provide any API endpoints, this code is pretty dirty. Tested on Python 2.7.11 and 3.4.2.
 
 ## Installation:
 
@@ -94,7 +92,7 @@ $ 8,122,070
   - List top 'n' currencies (by market capitalization):
 
 ```
->>> coinmarketcap.top('10')
+>>> coinmarketcap.top(10)
 ['Bitcoin', 'Ripple', 'Litecoin', 'BitShares', 'Dogecoin', 'Nxt', 'Peercoin', 'Stellar', 'Counterparty', 'Darkcoin']
 ```
 
@@ -118,16 +116,16 @@ false
 >>> coinmarketcap.coin_summary('bitcoin')
 {
     "cap_change_1h": "0.17 %",
-    "premine": false 
-    "market_cap": "$ 7,644,402,276", 
-    "name": "Bitcoin", 
-    "price": "$ 583.77", 
-    "rank": "1", 
+    "premine": false
+    "market_cap": "$ 7,644,402,276",
+    "name": "Bitcoin",
+    "price": "$ 583.77",
+    "rank": "1",
     "short": "BTC",
     "mineable": "true",
-    "coin_supply": "13,094,775", 
-    "market_volume": "$ 8,122,070", 
-    "cap_change_7d": "-2.10 %", 
+    "coin_supply": "13,094,775",
+    "market_volume": "$ 8,122,070",
+    "cap_change_7d": "-2.10 %",
     "cap_change_24h": "-1.07 %"
 }
 
@@ -158,7 +156,7 @@ Total Market Cap: $ 8,191,266,103
 
 ```
   Apache v2.0 License
-  Copyright 2014 Martin Simon
+  Copyright 2014-2015 Martin Simon
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
