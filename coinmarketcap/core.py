@@ -82,7 +82,7 @@ def last_updated():
 
 
 def total_market_cap():
-	return market_cap_info()[1] + market_cap_info()[2]
+	return market_cap_info()[1]
 
 
 def stats():
