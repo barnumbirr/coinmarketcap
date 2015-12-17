@@ -7,12 +7,6 @@ from .utils import top_currencies
 from .utils import market_cap_info
 from .utils import coinmarketcap_info
 
-__title__   = 'coinmarketcap'
-__version__ = '0.7'
-__author__ = 'Martin Simon <me@martinsimon.me>'
-__repo__    = 'https://github.com/mrsmn/coinmarketcap-api'
-__license__ = 'Apache v2.0 License'
-
 def about():
 	"""Returns some information about the coinmarketcap module."""
 

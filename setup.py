@@ -5,10 +5,10 @@ from distutils.core import setup
 
 setup(
     name = 'coinmarketcap',
-    version = '0.7',
-    url = 'https://github.com/c0ding/coinmarketcap-api',
-    download_url = 'https://github.com/c0ding/coinmarketcap-api/archive/master.zip',
-    author = 'c0ding',
+    version = '1.0',
+    url = 'https://github.com/mrsmn/coinmarketcap-api',
+    download_url = 'https://github.com/mrsmn/coinmarketcap-api/archive/master.zip',
+    author = 'Martin Simon <me@martinsimon.me>',
     author_email = 'me@martinsimon.me',
     license = 'Apache v2.0 License',
     packages = ['coinmarketcap'],

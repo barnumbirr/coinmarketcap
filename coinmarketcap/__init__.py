@@ -11,7 +11,7 @@
 #                                                              |_|
 
 __title__   = 'coinmarketcap'
-__version__ = '0.7'
+__version__ = '1.0'
 __author__ = 'Martin Simon <me@martinsimon.me>'
 __repo__    = 'https://github.com/mrsmn/coinmarketcap-api'
 __license__ = 'Apache v2.0 License'

@@ -11,12 +11,6 @@ except ImportError:
     from urllib2 import urlopen
 import lxml.html
 
-__title__   = 'coinmarketcap'
-__version__ = '0.7'
-__author__ = 'Martin Simon <me@martinsimon.me>'
-__repo__    = 'https://github.com/mrsmn/coinmarketcap-api'
-__license__ = 'Apache v2.0 License'
-
 ENTRY_POINT_URL = 'http://coinmarketcap.com/all.html'
 
 def coin_info(PARAMETER):
