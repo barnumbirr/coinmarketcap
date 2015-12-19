@@ -7,11 +7,6 @@ from .utils import top_currencies
 from .utils import market_cap_info
 from .utils import coinmarketcap_info
 
-def about():
-	"""Returns some information about the coinmarketcap module."""
-
-	return '{} v.{} is maintained by {} and available at {}.'.format(__title__, __version__, __author__, __repo__)
-
 def rank(PARAMETER):
 	return coin_info(PARAMETER)[0]
 
