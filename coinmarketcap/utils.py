@@ -11,7 +11,7 @@ except ImportError:
     from urllib import urlopen
 import lxml.html
 
-ENTRY_POINT_URL = 'http://coinmarketcap.com/all.html'
+ENTRY_POINT_URL = 'http://coinmarketcap.com/all/views/all/'
 
 def coin_info(PARAMETER):
 	raw_data = lxml.html.parse(ENTRY_POINT_URL)
