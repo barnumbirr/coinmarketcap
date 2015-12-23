@@ -11,13 +11,13 @@
 #                                                              |_|
 
 __title__   = 'coinmarketcap'
-__version__ = '1.1'
+__version__ = '1.2'
 __author__ = 'Martin Simon <me@martinsimon.me>'
 __repo__    = 'https://github.com/mrsmn/coinmarketcap-api'
 __license__ = 'Apache v2.0 License'
 
 from .core import (
-	about, rank, name, short, market_cap, price, coin_supply, market_volume,
+	rank, name, short, market_cap, price, coin_supply, market_volume,
 	cap_change_1h, cap_change_24h, cap_change_7d, top, mineable, premined,
 	last_updated, total_market_cap, stats, coin_summary
 )
