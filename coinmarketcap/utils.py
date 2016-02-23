@@ -35,6 +35,23 @@ def top_currencies(PARAMETER):
 	row = raw_data.xpath('//tr/td[@class="no-wrap currency-name"]//text()')
 	regex = re.compile("(?:[^\n]*(\n+))+")
 	currencies_list = list(filter(lambda i: not regex.search(i), row))
+
+	# normalize back to CSS id. Use coin_info(normalize(row[i]))[1] to get equivalent to text() xpath above
+	def normalize(currency):
+	    css_id = None
+	    idx = 0
+	    while True:
+		try:
+		    xpath_components = raw_data.getpath(currency.getparent()).split('/')[:-1 - idx]
+		    css_id = raw_data.xpath("/".join(xpath_components))[0].get("id")[3:]
+		except:
+		    pass
+		if css_id:
+		    break
+		idx +=1
+	    return css_id
+	currencies_list = [normalize(currency) for currency in currencies_list]
+
 	return currencies_list[:PARAMETER]
 
 def update_info():
