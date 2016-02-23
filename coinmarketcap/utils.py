@@ -42,7 +42,8 @@ def top_currencies(PARAMETER):
 	    idx = 0
 	    while True:
 		try:
-		    css_id = raw_data.xpath("/".join(raw_data.getpath(currency.getparent()).split('/')[:-1 - idx]))[0].get("id")[3:]
+		    xpath_components = raw_data.getpath(currency.getparent()).split('/')[:-1 - idx]
+		    css_id = raw_data.xpath("/".join(xpath_components))[0].get("id")[3:]
 		except:
 		    pass
 		if css_id:
