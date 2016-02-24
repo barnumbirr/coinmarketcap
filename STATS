@@ -1,25 +1,25 @@
 
    Analyzing: https://github.com/mrsmn/coinmarketcap-api/blob/master/coinmarketcap/core.py
 
-              Total Lines: 87
+              Total Lines: 82
 
-               Code Lines: 65 (74.7126%)
-              Blank Lines: 20 (22.9885%)
+               Code Lines: 63 (76.8292%)
+              Blank Lines: 18 (21.9512%)
 
-            Comment Lines: 1 (1.14942%)
-         Doc String Lines: 1 (1.14942%)
+            Comment Lines: 1 (1.21951%)
+         Doc String Lines: 0 (0.0%)
           Inline Comments: 1
-              Doc Strings: 1
-           Total Comments: 3
+              Doc Strings: 0
+           Total Comments: 2
 
-        Longest Code Line: 111
+        Longest Code Line: 90
        Shortest Code Line: 14 [return 'false']
 
      Longest Comment Line: 23
     Shortest Comment Line: 23 [# -*- coding: utf-8 ...]
 
                   Imports: 5
-                Functions: 18
+                Functions: 17
                   Classes: 0
             If Statements: 4
            Try Statements: 2
@@ -36,32 +36,32 @@
 
   Analyzing: https://github.com/mrsmn/coinmarketcap-api/blob/master/coinmarketcap/utils.py
 
-              Total Lines: 53
+              Total Lines: 83
 
-               Code Lines: 43 (81.1320%)
-              Blank Lines: 7 (13.2075%)
+               Code Lines: 68 (81.9277%)
+              Blank Lines: 11 (13.2530%)
 
-            Comment Lines: 3 (5.66037%)
+            Comment Lines: 4 (4.81927%)
          Doc String Lines: 0 (0.0%)
-          Inline Comments: 1
+          Inline Comments: 2
               Doc Strings: 0
-           Total Comments: 4
+           Total Comments: 6
 
         Longest Code Line: 111
-       Shortest Code Line: 19 [return coin_details]
+       Shortest Code Line: 7 [idx +=1]
 
-     Longest Comment Line: 36
+     Longest Comment Line: 104
     Shortest Comment Line: 32 [# Fall back to Pytho...]
 
-                  Imports: 4
-                Functions: 5
+                  Imports: 5
+                Functions: 7
                   Classes: 0
-            If Statements: 2
-           Try Statements: 1
-        Except Statements: 1
+            If Statements: 4
+           Try Statements: 2
+        Except Statements: 2
          Print Statements: 0
-              Assignments: 19
-                Variables: 15
+              Assignments: 30
+                Variables: 21
 
 
   Done analyzing: https://github.com/mrsmn/coinmarketcap-api/blob/master/coinmarketcap/utils.py

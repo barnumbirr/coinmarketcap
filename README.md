@@ -20,7 +20,7 @@ This API can currently retrieve the following data from [coinmarketcap](http://c
 
   - Rank:
 
-```
+```python
 >>> import coinmarketcap
 >>> coinmarketcap.rank('bitcoin')
 1
@@ -28,91 +28,91 @@ This API can currently retrieve the following data from [coinmarketcap](http://c
 
   - Name:
 
-```
+```python
 >>> coinmarketcap.name('bitcoin')
 Bitcoin
 ```
 
   - Symbol:
 
-```
+```python
 >>> coinmarketcap.short('bitcoin')
 BTC
 ```
 
   - Market capitalization (last 24h):
 
-```
+```python
 >>> coinmarketcap.market_cap('bitcoin')
 $ 7,644,402,276
 ```
 
   - Price:
 
-```
+```python
 >>> coinmarketcap.price('bitcoin')
 $ 583.77
 ```
 
   - Total coins:
 
-```
+```python
 >>> coinmarketcap.coin_supply('bitcoin')
 13,094,775
 ```
 
   - Market Volume:
 
-```
+```python
 >>> coinmarketcap.market_volume('bitcoin')
 $ 8,122,070
 ```
 
   - Market capitalization change (1 hour):
 
-```
+```python
 >>> coinmarketcap.cap_change_1h('bitcoin')
 0.17 %
 ```
 
   - Market capitalization change (24 hours):
 
-```
+```python
 >>> coinmarketcap.cap_change_24h('bitcoin')
 -1.07 %
 ```
 
   - Market capitalization change (7 days):
 
-```
+```python
 >>> coinmarketcap.cap_change_7d('bitcoin')
 -2.10 %
 ```
 
   - List top 'n' currencies (by market capitalization):
 
-```
+```python
 >>> coinmarketcap.top(10)
 ['bitcoin', 'ethereum', 'ripple', 'litecoin', 'maidsafecoin', 'dogecoin', 'dash', 'peercoin', 'bitshares', 'stellar']
 ```
 
   - Mineable:
 
-```
+```python
 >>> coinmarketcap.mineable('bitcoin')
 true
 ```
 
   - Premined:
 
-```
+```python
 >>> coinmarketcap.premined('bitcoin')
 false
 ```
 
   - Coin summary:
 
-```
+```python
 >>> coinmarketcap.coin_summary('bitcoin')
 {
     "cap_change_1h": "0.17 %",
@@ -128,26 +128,25 @@ false
     "cap_change_7d": "-2.10 %",
     "cap_change_24h": "-1.07 %"
 }
-
 ```
 
   - Last update:
 
-```
+```python
 >>> coinmarketcap.last_updated()
 Last updated: Aug 03, 2014  9:05 AM UTC
 ```
 
   - Total market capitalization:
 
-```
+```python
 >>> coinmarketcap.total_market_cap()
 Total Market Cap: $ 8,191,266,103
 ```
 
   - Coinmarketcap stats:
 
-```
+```python
 >>> coinmarketcap.stats()
 501 Currencies / 1532 Markets / 28 Assets
 ```
@@ -156,7 +155,7 @@ Total Market Cap: $ 8,191,266,103
 
 ```
   Apache v2.0 License
-  Copyright 2014-2015 Martin Simon
+  Copyright 2014-2016 Martin Simon
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
