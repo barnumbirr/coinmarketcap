@@ -93,7 +93,7 @@ $ 8,122,070
 
 ```
 >>> coinmarketcap.top(10)
-['Bitcoin', 'Ripple', 'Litecoin', 'BitShares', 'Dogecoin', 'Nxt', 'Peercoin', 'Stellar', 'Counterparty', 'Darkcoin']
+['bitcoin', 'ethereum', 'ripple', 'litecoin', 'maidsafecoin', 'dogecoin', 'dash', 'peercoin', 'bitshares', 'stellar']
 ```
 
   - Mineable:
