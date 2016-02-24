@@ -10,11 +10,24 @@ except ImportError:
     # Fall back to Python 2's urllib
     from urllib import urlopen
 import lxml.html
+import time
 
 ENTRY_POINT_URL = 'http://coinmarketcap.com/all/views/all/'
+UPDATE_TIMEOUT = 60.0 # in seconds
+
+_raw_data = None
+_response_ts = None
+def _get_raw_data():
+    global _raw_data
+    global _response_ts
+    if not _raw_data or (_response_ts and time.time() - _response_ts > UPDATE_TIMEOUT):
+	_raw_data = lxml.html.parse(ENTRY_POINT_URL)
+	_response_ts = time.time()
+    return _raw_data
+
 
 def coin_info(PARAMETER):
-	raw_data = lxml.html.parse(ENTRY_POINT_URL)
+	raw_data = _get_raw_data()
 	tree = raw_data.xpath('//tr[@id="id-' + PARAMETER + '"]/td//text()')
 	clean_space = map(lambda x: x.strip(), tree)
 	coin_details = [x for x in clean_space if x]
@@ -31,7 +44,7 @@ def coin_info(PARAMETER):
 	return coin_details
 
 def top_currencies(PARAMETER):
-	raw_data = lxml.html.parse(ENTRY_POINT_URL)
+	raw_data = _get_raw_data()
 	row = raw_data.xpath('//tr/td[@class="no-wrap currency-name"]//text()')
 	regex = re.compile("(?:[^\n]*(\n+))+")
 	currencies_list = list(filter(lambda i: not regex.search(i), row))
@@ -55,12 +68,12 @@ def top_currencies(PARAMETER):
 	return currencies_list[:PARAMETER]
 
 def update_info():
-	raw_data = lxml.html.parse(ENTRY_POINT_URL)
+	raw_data = _get_raw_data()
 	update_details = raw_data.xpath("//p[@class='small']//text()")
 	return update_details
 
 def market_cap_info():
-	raw_data = lxml.html.parse(ENTRY_POINT_URL)
+	raw_data = _get_raw_data()
 	market_cap_details = raw_data.xpath("//div[@id='total_market_cap']//text()")
 	return market_cap_details
 
