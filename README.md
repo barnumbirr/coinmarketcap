@@ -25,6 +25,16 @@ This API can currently retrieve the following data from [coinmarketcap](http://c
 >>> from coinmarketcap import Market
 >>> coinmarketcap = Market()
 >>> coinmarketcap.ticker(<currency>)
+# <currency> can be passed through 'ethereum' or 'ETH' and returns in json
+
+>>> coinmarketcap.ticker('ETH')
+>>> coinmarketcap.ticker('ethereum')
+
+# Add VERBOSE=True for a string response, like this:
+>>> coinmarketcap.ticker('STEEM', VERBOSE=True)
+
+# Receive all the currencies in a string:
+>>> coinmarketcap.ticker(VERBOSE=True)
 [
   {
     id: "bitcoin",
@@ -62,7 +72,7 @@ This API can currently retrieve the following data from [coinmarketcap](http://c
 - **`GET /v1/global/`**
 
 ```python
->>> coinmarketcap.stats()
+>>> coinmarketcap.stats(VERBOSE=True)
 {
   total_market_cap_usd: 8280726727,
   total_24h_volume_usd: 108644044,
