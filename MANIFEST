@@ -3,4 +3,5 @@ COPYING
 setup.py
 README.md
 coinmarketcap/core.py
+coinmarketcap/up.py
 coinmarketcap/__init__.py
