@@ -30,7 +30,7 @@ This API can currently retrieve the following data from [coinmarketcap](http://c
 >>> coinmarketcap.ticker('ETH')
 >>> coinmarketcap.ticker('ethereum')
 
-# Add VERBOSE=True for a string response, like this:
+# Add VERBOSE=True for a more readable string response, like this:
 >>> coinmarketcap.ticker('STEEM', VERBOSE=True)
 
 # Receive all the currencies in a string:
