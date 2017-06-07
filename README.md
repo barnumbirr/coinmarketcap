@@ -2,7 +2,7 @@
 
 [![PyPi Version](http://img.shields.io/pypi/v/coinmarketcap.svg)](https://pypi.python.org/pypi/coinmarketcap/)
 
-**coinmarketcap** s an APACHE licensed library written in Python providing an easy to use wrapper around the [coinmarketcap](http://coinmarketcap.com/) API.
+**coinmarketcap** is an APACHE licensed library written in Python providing an easy to use wrapper around the [coinmarketcap](http://coinmarketcap.com/) API.
 This library has been tested with Python 2.7.x and Python 3.6.x.
 
 ## Installation:
