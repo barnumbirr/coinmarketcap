@@ -1,42 +1,62 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-try:
-	import urllib.request as urllib2
-except ImportError:
-	import urllib2
+import requests
 
 class Market(object):
 
-	def __init__(self, base_url='https://api.coinmarketcap.com/v1/'):
+	__SESSION = None
+	__DEFAULT_BASE_URL = 'https://api.coinmarketcap.com/v1/'
+	__DEFAULT_TIMEOUT = 120
+
+	def __init__(self, base_url = __DEFAULT_BASE_URL, request_timeout = __DEFAULT_TIMEOUT):
 		self.base_url = base_url
-		self.opener = urllib2.build_opener()
-		self.opener.addheaders.append(('Content-Type', 'application/json'))
-		self.opener.addheaders.append(('User-agent', 'coinmarketcap - python wrapper \
-		around coinmarketcap.com (github.com/mrsmn/coinmarketcap-api)'))
+		self.request_timeout = request_timeout
 
-	def _urljoin(self, *args):
-		""" Internal urljoin function because urlparse.urljoin sucks """
-		return "/".join(map(lambda x: str(x).rstrip('/'), args))
+	@property
+	def session(self):
+		if not self.__SESSION:
+			self._session = requests.Session()
+			self._session.headers.update({'Content-Type': 'application/json'})
+			self._session.headers.update({'User-agent': 'coinmarketcap - python wrapper \
+		around coinmarketcap.com (github.com/mrsmn/coinmarketcap-api)'})
+		return self._session
 
-	def _get(self, api_call, query):
-		url = self._urljoin(self.base_url, api_call)
-		if query == None:
-			response = self.opener.open(url).read()
-		else:
-			response_url = self._urljoin(url, query)
-			response = self.opener.open(response_url).read()
+	def __request(self, endpoint, params):
+		response_object = self.session.get(self.base_url + endpoint, params = params, timeout = self.request_timeout)
+
+		if response_object.status_code != 200:
+			raise Exception('An error occured, please try again.')
+		try:
+			response = response_object.json()
+		except:
+			raise Exception("Could not parse response as JSON, response code was %s, bad json content was '%s'" % (response_object.status_code, response_object.content))
+
 		return response
 
-	def ticker(self, param=None):
-		""" ticker() returns a dict containing all the currencies
-			ticker(currency) returns a dict containing only the currency you
-			passed as an argument.
+	def ticker(self, currency="", **kwargs):
 		"""
-		data = self._get('ticker/', query=param)
-		return data
+        Returns a dict containing one/all the currencies
+        Optional parameters:
+		(int) limit - only returns the top limit results.
+		(string) convert - return price, 24h volume, and market cap in terms of another currency. Valid values are:
+		"AUD", "BRL", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "IDR", "INR", "JPY", "KRW", "MXN", "RUB"
+        """
 
-	def stats(self):
-		""" stats() returns a dict containing cryptocurrency statistics. """
-		data = self._get('global/', query=None)
-		return data
+		params = {}
+		params.update(kwargs)
+		response = self.__request('ticker/' + currency, params)
+		return response
+
+	def stats(self, **kwargs):
+		"""
+		Returns a dict containing cryptocurrency statistics.
+		Optional parameters:
+		(string) convert - return 24h volume, and market cap in terms of another currency. Valid values are:
+		"AUD", "BRL", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "IDR", "INR", "JPY", "KRW", "MXN", "RUB"
+		"""
+
+		params = {}
+		params.update(kwargs)
+		response = self.__request('global/', params)
+		return response

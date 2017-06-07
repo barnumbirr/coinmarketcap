@@ -1,5 +1,4 @@
-STATS
-COPYING
+LICENSE
 setup.py
 README.md
 coinmarketcap/core.py
