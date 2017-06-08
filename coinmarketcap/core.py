@@ -5,7 +5,7 @@ import requests
 
 class Market(object):
 
-	__SESSION = None
+	_session = None
 	__DEFAULT_BASE_URL = 'https://api.coinmarketcap.com/v1/'
 	__DEFAULT_TIMEOUT = 120
 
@@ -15,7 +15,7 @@ class Market(object):
 
 	@property
 	def session(self):
-		if not self.__SESSION:
+		if not self._session:
 			self._session = requests.Session()
 			self._session.headers.update({'Content-Type': 'application/json'})
 			self._session.headers.update({'User-agent': 'coinmarketcap - python wrapper \
