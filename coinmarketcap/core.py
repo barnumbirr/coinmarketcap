@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import json
 import requests
+import requests_cache
 
 class Market(object):
 
@@ -16,7 +18,7 @@ class Market(object):
 	@property
 	def session(self):
 		if not self._session:
-			self._session = requests.Session()
+			self._session = requests_cache.core.CachedSession(cache_name='coinmarketcap_cache', backend='sqlite', expire_after=120)
 			self._session.headers.update({'Content-Type': 'application/json'})
 			self._session.headers.update({'User-agent': 'coinmarketcap - python wrapper \
 		around coinmarketcap.com (github.com/mrsmn/coinmarketcap-api)'})
@@ -28,9 +30,10 @@ class Market(object):
 		if response_object.status_code != 200:
 			raise Exception('An error occured, please try again.')
 		try:
-			response = response_object.json()
-		except:
-			raise Exception("Could not parse response as JSON, response code was %s, bad json content was '%s'" % (response_object.status_code, response_object.content))
+			response = json.loads(response_object.text)
+			response[0][u'cached'] = response_object.from_cache
+		except requests.exceptions.RequestException as e:
+			return e
 
 		return response
 

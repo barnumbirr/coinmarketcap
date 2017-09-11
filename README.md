@@ -5,6 +5,8 @@
 **coinmarketcap** is an APACHE licensed library written in Python providing an easy to use wrapper around the [coinmarketcap](http://coinmarketcap.com/) API.
 This library has been tested with Python 2.7.x and Python 3.6.x.
 
+**Please note that all results are cached for 120 seconds.**
+
 ## Installation:
 
 From source use
