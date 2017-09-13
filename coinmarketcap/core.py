@@ -31,7 +31,12 @@ class Market(object):
 			raise Exception('An error occured, please try again.')
 		try:
 			response = json.loads(response_object.text)
-			response[0][u'cached'] = response_object.from_cache
+			# TODO:
+			# Add response_object.from_cache to dicts so. people know
+			# if request response is cached or not.
+			# Example below only works on list of dicts, not on dict
+			# so works for ticker() but not for stats()
+			# response = [dict(item, **{u'cached':response_object.from_cache}) for item in response]
 		except requests.exceptions.RequestException as e:
 			return e
 
