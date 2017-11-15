@@ -24,10 +24,10 @@ This API can currently retrieve the following data from [coinmarketcap](http://c
 - **`GET /v1/ticker/`**
 - **`GET /v1/ticker/currency`**
 - **`Optional parameters:`**
+    - **(int) start** - return results from rank [start] and above
     - **(int) limit** - only returns the top limit results.
     - **(string) convert** - return price, 24h volume, and market cap in terms of another currency. Valid values are:
-"AUD", "BRL", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "IDR", "INR", "JPY", "KRW", "MXN", "RUB"
-
+"AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK", "DKK", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR", "JPY", "KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB", "TRY", "TWD", "ZAR"
 ```python
 >>> from coinmarketcap import Market
 >>> coinmarketcap = Market()
@@ -95,8 +95,8 @@ This API can currently retrieve the following data from [coinmarketcap](http://c
 
 - **`GET /v1/global/`**
 - **`Optional parameters:`**
-    - **(string) convert** - return 24h volume, and market cap in terms of another currency. Valid values are:
-"AUD", "BRL", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "IDR", "INR", "JPY", "KRW", "MXN", "RUB"
+    - **(string) convert** - return price, 24h volume, and market cap in terms of another currency. Valid values are:
+"AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK", "DKK", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR", "JPY", "KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB", "TRY", "TWD", "ZAR"
 
 
 ```python
