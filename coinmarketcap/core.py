@@ -51,6 +51,8 @@ class Market(object):
 
 		params = {}
 		params.update(kwargs)
+		if currency:
+			currency = currency + '/'
 		response = self.__request('ticker/' + currency, params)
 		return response
 
