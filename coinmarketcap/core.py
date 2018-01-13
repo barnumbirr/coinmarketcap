@@ -42,7 +42,7 @@ class Market(object):
 
 	def ticker(self, currency="", **kwargs):
 		"""
-        Returns a dict containing one/all the currencies
+        Returns a list of dicts containing one/all the currencies
         Optional parameters:
 		(int) limit - only returns the top limit results.
 		(string) convert - return price, 24h volume, and market cap in terms of another currency. Valid values are:
@@ -51,6 +51,7 @@ class Market(object):
 
 		params = {}
 		params.update(kwargs)
+		# see https://github.com/mrsmn/coinmarketcap/pull/28
 		if currency:
 			currency = currency + '/'
 		response = self.__request('ticker/' + currency, params)
