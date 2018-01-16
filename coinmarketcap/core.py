@@ -12,8 +12,9 @@ class Market(object):
 	_session = None
 	__DEFAULT_BASE_URL = 'https://api.coinmarketcap.com/v1/'
 	__DEFAULT_TIMEOUT = 120
+	__TEMPDIR_CACHE = False
 
-	def __init__(self, base_url = __DEFAULT_BASE_URL, request_timeout = __DEFAULT_TIMEOUT, tempdir_cache = False):
+	def __init__(self, base_url = __DEFAULT_BASE_URL, request_timeout = __DEFAULT_TIMEOUT, tempdir_cache = __TEMPDIR_CACHE):
 		self.base_url = base_url
 		self.request_timeout = request_timeout
 		cache_filename = 'coinmarketcap_cache'
