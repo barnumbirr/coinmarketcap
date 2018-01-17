@@ -26,7 +26,7 @@ class Market(object):
 			self._session = requests_cache.core.CachedSession(cache_name=self.cache_name, backend='sqlite', expire_after=120)
 			self._session.headers.update({'Content-Type': 'application/json'})
 			self._session.headers.update({'User-agent': 'coinmarketcap - python wrapper around \
-														 coinmarketcap.com (github.com/mrsmn/coinmarketcap-api)'})
+			                             coinmarketcap.com (github.com/mrsmn/coinmarketcap-api)'})
 		return self._session
 
 	def __request(self, endpoint, params):
@@ -47,11 +47,11 @@ class Market(object):
 
 	def ticker(self, currency="", **kwargs):
 		"""
-        Returns a list of dicts containing one/all the currencies
+		Returns a list of dicts containing one/all the currencies
 
-        Optional parameters:
+		Optional parameters:
 
-        GET /ticker/
+		GET /ticker/
 
 		(int) start - return results from rank [start] and above
 		(int) limit - return a maximum of [limit] results (default is 100, use 0 to return all results)
@@ -60,17 +60,17 @@ class Market(object):
 				 "INR", "JPY","KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB",
 				 "TRY", "TWD", "ZAR"
 
-
 		GET /ticker/{id}
 
 		(string) convert - return price, 24h volume, and market cap in terms of another currency. Valid values are:
 				 "AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK", "DKK", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS",
 				 "INR", "JPY","KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB",
 				 "TRY", "TWD", "ZAR"
+
 		Misc:
 
 		All 'last_updated' fields are unix timestamps.
-        """
+		"""
 
 		params = {}
 		params.update(kwargs)
