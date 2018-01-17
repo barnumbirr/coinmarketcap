@@ -18,7 +18,7 @@ class Market(object):
 		self.base_url = base_url
 		self.request_timeout = request_timeout
 		self.cache_filename = 'coinmarketcap_cache'
-		self.cache_name = os.path.join(tempfile.gettempdir(), self.cache_filename) if tempdir_cache else cache_filename
+		self.cache_name = os.path.join(tempfile.gettempdir(), self.cache_filename) if tempdir_cache else self.cache_filename
 
 	@property
 	def session(self):

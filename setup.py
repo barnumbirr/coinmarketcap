@@ -5,7 +5,7 @@ from distutils.core import setup
 
 setup(
     name = 'coinmarketcap',
-    version = '4.2.0',
+    version = '4.2.1',
     url = 'https://github.com/mrsmn/coinmarketcap-api',
     download_url = 'https://github.com/mrsmn/coinmarketcap-api/archive/master.zip',
     author = 'Martin Simon <me@martinsimon.me>',
