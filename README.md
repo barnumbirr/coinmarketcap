@@ -22,12 +22,13 @@ or install from PyPi
 This API can currently retrieve the following data from [coinmarketcap](http://coinmarketcap.com/):
 
 - **`GET /v1/ticker/`**
-- **`GET /v1/ticker/currency`**
+- **`GET /v1/ticker/{id}`**
 - **`Optional parameters:`**
     - **(int) start** - return results from rank [start] and above
-    - **(int) limit** - only returns the top limit results.
+    - **(int) limit** - return a maximum of [limit] results (default is 100, use 0 to return all results)
     - **(string) convert** - return price, 24h volume, and market cap in terms of another currency. Valid values are:
-"AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK", "DKK", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR", "JPY", "KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB", "TRY", "TWD", "ZAR"
+"AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK", "DKK", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR", "JPY","KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB", "TRY", "TWD", "ZAR"
+
 ```python
 >>> from coinmarketcap import Market
 >>> coinmarketcap = Market()
@@ -96,27 +97,26 @@ This API can currently retrieve the following data from [coinmarketcap](http://c
 - **`GET /v1/global/`**
 - **`Optional parameters:`**
     - **(string) convert** - return price, 24h volume, and market cap in terms of another currency. Valid values are:
-"AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK", "DKK", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR", "JPY", "KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB", "TRY", "TWD", "ZAR"
+"AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK", "DKK", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR", "JPY","KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB", "TRY", "TWD", "ZAR"
 
 
 ```python
 >>> coinmarketcap.stats()
 {
-    "bitcoin_percentage_of_market_cap": 45.71,
-    "total_market_cap_usd": 101753095791.0,
-    "active_markets": 4046,
-    "active_assets": 121,
-    "total_24h_volume_eur": 3199756517.0,
-    "active_currencies": 745,
-    "total_market_cap_eur": 90722958453.0,
-    "total_24h_volume_usd": 3588784327.0
+    "total_market_cap_usd": 201241796675,
+    "total_24h_volume_usd": 4548680009,
+    "bitcoin_percentage_of_market_cap": 62.54,
+    "active_currencies": 896,
+    "active_assets": 360,
+    "active_markets": 6439,
+    "last_updated": 1509909852
 }
 ```
 
 ## License:
 
 ```
-Copyright 2014-2017 Martin Simon
+Copyright 2014-2018 Martin Simon
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
