@@ -22,7 +22,6 @@ or install from PyPi
 This API can currently retrieve the following data from [coinmarketcap](http://coinmarketcap.com/):
 
 - **`GET /v1/ticker/`**
-- **`GET /v1/ticker/{id}`**
 - **`Optional parameters:`**
     - **(int) start** - return results from rank [start] and above
     - **(int) limit** - return a maximum of [limit] results (default is 100, use 0 to return all results)
@@ -32,64 +31,98 @@ This API can currently retrieve the following data from [coinmarketcap](http://c
 ```python
 >>> from coinmarketcap import Market
 >>> coinmarketcap = Market()
->>> coinmarketcap.ticker(<currency>, limit=3, convert='EUR')
+>>> coinmarketcap.ticker(start=0, limit=3, convert='EUR')
 [
     {
-        "market_cap_usd": "46511837774.0",
-        "price_usd": "2840.01",
-        "last_updated": "1496839152",
+        "id": "bitcoin",
         "name": "Bitcoin",
-        "24h_volume_usd": "1653540000.0",
-        "percent_change_7d": "28.25",
         "symbol": "BTC",
         "rank": "1",
-        "percent_change_1h": "0.17",
-        "total_supply": "16377350.0",
+        "price_usd": "11710.0",
         "price_btc": "1.0",
-        "available_supply": "16377350.0",
-        "market_cap_eur": "41469908047.0",
-        "percent_change_24h": "-1.63",
-        "24h_volume_eur": "1474294610.46",
-        "id": "bitcoin",
-        "price_eur": "2532.15007599"
+        "24h_volume_usd": "19160900000.0",
+        "market_cap_usd": "196848905750",
+        "available_supply": "16810325.0",
+        "total_supply": "16810325.0",
+        "max_supply": "21000000.0",
+        "percent_change_1h": "-0.57",
+        "percent_change_24h": "14.41",
+        "percent_change_7d": "-15.59",
+        "last_updated": "1516281264",
+        "price_eur": "9576.50826",
+        "24h_volume_eur": "15669898985.4",
+        "market_cap_eur": "160984216216"
     },
     {
-        "market_cap_usd": "24216937775.0",
-        "price_usd": "262.428",
-        "last_updated": "1496839164",
+        "id": "ethereum",
         "name": "Ethereum",
-        "24h_volume_usd": "576588000.0",
-        "percent_change_7d": "13.56",
         "symbol": "ETH",
         "rank": "2",
-        "percent_change_1h": "0.22",
-        "total_supply": "92280312.0",
-        "price_btc": "0.0932293",
-        "available_supply": "92280312.0",
-        "market_cap_eur": "21591797503.0",
-        "percent_change_24h": "0.72",
-        "24h_volume_eur": "514085284.212",
-        "id": "ethereum",
-        "price_eur": "233.980542372"
+        "price_usd": "1040.83",
+        "price_btc": "0.0895685",
+        "24h_volume_usd": "8234010000.0",
+        "market_cap_usd": "101020414352",
+        "available_supply": "97057554.0",
+        "total_supply": "97057554.0",
+        "max_supply": null,
+        "percent_change_1h": "-1.66",
+        "percent_change_24h": "19.22",
+        "percent_change_7d": "-15.12",
+        "last_updated": "1516281551",
+        "price_eur": "851.19701898",
+        "24h_volume_eur": "6733822782.06",
+        "market_cap_eur": "82615100979.0"
     },
     {
-        "market_cap_usd": "10803955417.0",
-        "price_usd": "0.279738",
-        "last_updated": "1496839144",
+        "id": "ripple",
         "name": "Ripple",
-        "24h_volume_usd": "110956000.0",
-        "percent_change_7d": "27.08",
         "symbol": "XRP",
         "rank": "3",
-        "percent_change_1h": "-0.15",
-        "total_supply": "99994661895.0",
-        "price_btc": "0.00009938",
-        "available_supply": "38621693933.0",
-        "market_cap_eur": "9632795846.0",
-        "percent_change_24h": "-3.87",
-        "24h_volume_eur": "98928258.644",
-        "id": "ripple",
-        "price_eur": "0.2494141211"
+        "price_usd": "1.5284",
+        "price_btc": "0.00013153",
+        "24h_volume_usd": "9351690000.0",
+        "market_cap_usd": "59208905872.0",
+        "available_supply": "38739142811.0",
+        "total_supply": "99993093880.0",
+        "max_supply": "100000000000",
+        "percent_change_1h": "-2.32",
+        "percent_change_24h": "47.76",
+        "percent_change_7d": "-19.55",
+        "last_updated": "1516281541",
+        "price_eur": "1.2499346904",
+        "24h_volume_eur": "7647868192.14",
+        "market_cap_eur": "48421398476.0"
+    }
+]
+```
+
+- **`GET /v1/ticker/{id}`**
+- **`Optional parameters:`**
+    - **(string) convert** - return price, 24h volume, and market cap in terms of another currency. Valid values are:
+"AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK", "DKK", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR", "JPY","KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB", "TRY", "TWD", "ZAR"
+
+```python
+>>> coinmarketcap.ticker('bitcoin', convert='EUR')
+[
+    {
+        "id": "bitcoin",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "rank": "1",
+        "price_usd": "11710.0",
+        "price_btc": "1.0",
+        "24h_volume_usd": "19160900000.0",
+        "market_cap_usd": "196848905750",
+        "available_supply": "16810325.0",
+        "total_supply": "16810325.0",
+        "max_supply": "21000000.0",
+        "percent_change_1h": "-0.57",
+        "percent_change_24h": "14.41",
+        "percent_change_7d": "-15.59",
+        "last_updated": "1516281264",
+        "price_eur": "9576.50826",
+        "24h_volume_eur": "15669898985.4",
+        "market_cap_eur": "160984216216"
     }
 ]
 ```
@@ -101,15 +134,17 @@ This API can currently retrieve the following data from [coinmarketcap](http://c
 
 
 ```python
->>> coinmarketcap.stats()
+>>> coinmarketcap.stats(convert='EUR')
 {
-    "total_market_cap_usd": 201241796675,
-    "total_24h_volume_usd": 4548680009,
-    "bitcoin_percentage_of_market_cap": 62.54,
-    "active_currencies": 896,
-    "active_assets": 360,
-    "active_markets": 6439,
-    "last_updated": 1509909852
+    "total_market_cap_usd": 572724110011.0,
+    "total_24h_volume_usd": 62123365544.0,
+    "bitcoin_percentage_of_market_cap": 34.29,
+    "active_currencies": 895,
+    "active_assets": 535,
+    "active_markets": 7597,
+    "last_updated": 1516281565,
+    "total_market_cap_eur": 468377213511.0,
+    "total_24h_volume_eur": 50804861082.0
 }
 ```
 
