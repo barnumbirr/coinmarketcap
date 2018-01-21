@@ -13,12 +13,18 @@ class Market(object):
 	__DEFAULT_BASE_URL = 'https://api.coinmarketcap.com/v1/'
 	__DEFAULT_TIMEOUT = 30
 	__TEMPDIR_CACHE = True
+	__DATA_FILE = 'symbols.json'
 
 	def __init__(self, base_url = __DEFAULT_BASE_URL, request_timeout = __DEFAULT_TIMEOUT, tempdir_cache = __TEMPDIR_CACHE):
 		self.base_url = base_url
 		self.request_timeout = request_timeout
 		self.cache_filename = 'coinmarketcap_cache'
 		self.cache_name = os.path.join(tempfile.gettempdir(), self.cache_filename) if tempdir_cache else self.cache_filename
+
+		# Load a dictionary of symbol to id mappings from a json data file
+		symbols_filename =  os.path.join(os.path.dirname(__file__), 'data', self.__DATA_FILE)
+		with open(symbols_filename) as fd:
+			self.symbol_data = json.load(fd)
 
 	@property
 	def session(self):
@@ -45,7 +51,7 @@ class Market(object):
 
 		return response
 
-	def ticker(self, currency="", **kwargs):
+	def ticker(self, currency="", symbol="", **kwargs):
 		"""
 		Returns a list of dicts containing one/all the currencies
 
@@ -70,6 +76,8 @@ class Market(object):
 		Misc:
 
 		All 'last_updated' fields are unix timestamps.
+
+		Generally either currency or symbol should be specified but not both. If both a currency and a symbol are specified, symbol is ignored.
 		"""
 
 		params = {}
@@ -78,6 +86,9 @@ class Market(object):
 		# see https://github.com/barnumbirr/coinmarketcap/pull/28
 		if currency:
 			currency = currency + '/'
+			# If both a currency id and a currency symbol are provided, then the symbol is not used.
+		elif symbol:
+			currency = self.symbol_data[symbol.upper()] + '/'
 
 		response = self.__request('ticker/' + currency, params)
 		return response
