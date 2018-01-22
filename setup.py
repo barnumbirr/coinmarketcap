@@ -15,5 +15,6 @@ setup(
     description = 'Python wrapper around the coinmarketcap.com API.',
     long_description = open('README.md','r').read(),
     install_requires=['requests', 'requests_cache'],
+    include_package_data = True,
     keywords = ['cryptocurrency', 'API', 'coinmarketcap','BTC', 'Bitcoin', 'LTC', 'Litecoin', 'DOGE', 'Dogecoin', 'ETH', 'Ethereum '],
 )
