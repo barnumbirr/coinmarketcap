@@ -148,6 +148,13 @@ This API can currently retrieve the following data from [coinmarketcap](http://c
 }
 ```
 
+## Developers:
+
+The file `symbols.json` in the `coinmarketcap/data` folder is generated via the `scripts/get_symbols.py` script.
+To update, run the script and move the resulting `scripts/symbols.json` to `coinmarketcap/data/symbols.json`.
+
+End users of this library will not need to do this as an updated version of `symbols.json` is included with each release.
+
 ## License:
 
 ```
