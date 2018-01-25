@@ -1,4 +1,4 @@
-<h1><img src="https://raw.githubusercontent.com/mrsmn/coinmarketcap-api/master/doc/coinmarketcap.png" height=85 alt="coinmarketcap" title="coinmarketcap">coinmarketcap</h1>
+<h1><img src="https://raw.githubusercontent.com/mrsmn/coinmarketcap/master/doc/coinmarketcap.png" height=85 alt="coinmarketcap" title="coinmarketcap">coinmarketcap</h1>
 
 [![PyPi Version](http://img.shields.io/pypi/v/coinmarketcap.svg)](https://pypi.python.org/pypi/coinmarketcap/)
 
