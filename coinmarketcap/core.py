@@ -26,7 +26,7 @@ class Market(object):
 			self._session = requests_cache.core.CachedSession(cache_name=self.cache_name, backend='sqlite', expire_after=120)
 			self._session.headers.update({'Content-Type': 'application/json'})
 			self._session.headers.update({'User-agent': 'coinmarketcap - python wrapper around \
-			                             coinmarketcap.com (github.com/mrsmn/coinmarketcap)'})
+			                             coinmarketcap.com (github.com/barnumbirr/coinmarketcap)'})
 		return self._session
 
 	def __request(self, endpoint, params):
@@ -75,7 +75,7 @@ class Market(object):
 		params = {}
 		params.update(kwargs)
 
-		# see https://github.com/mrsmn/coinmarketcap/pull/28
+		# see https://github.com/barnumbirr/coinmarketcap/pull/28
 		if currency:
 			currency = currency + '/'
 

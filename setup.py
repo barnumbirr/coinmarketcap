@@ -6,8 +6,8 @@ from distutils.core import setup
 setup(
     name = 'coinmarketcap',
     version = '4.2.1',
-    url = 'https://github.com/mrsmn/coinmarketcap',
-    download_url = 'https://github.com/mrsmn/coinmarketcap/archive/master.zip',
+    url = 'https://github.com/barnumbirr/coinmarketcap',
+    download_url = 'https://github.com/barnumbirr/coinmarketcap/archive/master.zip',
     author = 'Martin Simon <me@martinsimon.me>',
     author_email = 'me@martinsimon.me',
     license = 'Apache v2.0 License',
