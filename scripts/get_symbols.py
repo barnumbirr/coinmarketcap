@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # Print all the symbols that had a collision.
     collision_list = []
-    for symbol in collisions.keys():
+    for symbol in sorted(collisions.keys()):
         ids = ", ".join(collisions[symbol])
         print('Symbol collision -  %5s: %s.' % (symbol, ids))
         collision_list.append('%5s: %s\n' % (symbol, ids))
@@ -38,4 +38,4 @@ if __name__ == "__main__":
         json.dump(symbols, fd, indent = 4, sort_keys = True)
 
     with open(__COLLISION_LOG, 'w') as fd:
-        fd.writelines(collision_list)
+        fd.writelines(sorted(collision_list))

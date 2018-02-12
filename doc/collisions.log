@@ -1,34 +1,34 @@
-  CAT: bitclave, blockcat, catcoin
-  BTM: bytom, bitmark
-  PUT: profile-utility-token, putincoin
-  NET: nimiq, netcoin
+  ACC: adcoin, accelerator-network, acchain
+  BET: dao-casino, betacoin
+  BLT: bloomtoken, bitcoin-lightning
   BLZ: bluzelle, blazecoin
   BTG: bitcoin-gold, bitgem
-  GTC: game, global-tour-coin
-  CMT: cybermiles, comet
-SMART: smartcash, smartbillions
-  ACC: adcoin, accelerator-network, acchain
-  ICN: iconomi, icoin
-  RMC: russian-mining-coin, remicoin
-  GCC: thegcccoin, guccionecoin
-  KNC: kyber-network, kingn-coin
- LBTC: litebitcoin, lightning-bitcoin
- FAIR: faircoin, fairgame
-  CPC: capricoin, cpchain
-  HMC: harmonycoin-hmc, health-mutual-society
-  ENT: eternity, entcash
-  BLT: bloomtoken, bitcoin-lightning
-  CMS: comsa-eth, comsa-xem
+  BTM: bytom, bitmark
   CAN: canyacoin, content-and-ad-network
-  XIN: mixin, infinity-economics
-  MAG: magnet, maggie
-  WIC: waykichain, wi-coin
- RUPX: rupaya, rupaya-old
-  QBT: qbao, cubits
+  CAT: bitclave, blockcat, catcoin
+  CMS: comsa-eth, comsa-xem
+  CMT: cybermiles, comet
+  CPC: capricoin, cpchain
+  ENT: eternity, entcash
   ETT: encryptotel, encryptotel-eth
+  GCC: thegcccoin, guccionecoin
+  GTC: game, global-tour-coin
+  HMC: harmonycoin-hmc, health-mutual-society
   HNC: helleniccoin, huncoin
-  BET: dao-casino, betacoin
+  ICN: iconomi, icoin
+  KNC: kyber-network, kingn-coin
+  MAG: magnet, maggie
+  NET: nimiq, netcoin
+  PUT: profile-utility-token, putincoin
+  QBT: qbao, cubits
   RCN: ripio-credit-network, rcoin
+  RMC: russian-mining-coin, remicoin
+  WIC: waykichain, wi-coin
   XID: sphre-air, international-diamond
+  XIN: mixin, infinity-economics
  BTCS: bitcoin-scrypt, bitcoin-silver
  CASH: cashcoin, cash-poker-pro
+ FAIR: faircoin, fairgame
+ LBTC: litebitcoin, lightning-bitcoin
+ RUPX: rupaya, rupaya-old
+SMART: smartcash, smartbillions
