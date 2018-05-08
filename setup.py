@@ -27,4 +27,5 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     long_description = open('README.md','r').read(),
+    long_description_content_type='text/markdown',
 )
