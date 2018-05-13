@@ -9,7 +9,7 @@ except ImportError:
 setup(
     name = 'coinmarketcap',
     packages = ['coinmarketcap'],
-    version = '5.0.2',
+    version = '5.0.1',
     description = 'Python wrapper around the coinmarketcap.com API.',
     author = 'Martin Simon',
     author_email = 'me@martinsimon.me',
@@ -26,6 +26,6 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
-    long_description = open('README.md','r', encoding='utf8').read(),
+    long_description = open('README.md','r').read(),
     long_description_content_type='text/markdown',
 )
