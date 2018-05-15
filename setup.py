@@ -19,18 +19,20 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     name = 'coinmarketcap',
     packages = ['coinmarketcap'],
-    version = '5.0.2',
+    version = '5.0.3',
     description = 'Python wrapper around the coinmarketcap.com API.',
     author = 'Martin Simon',
     author_email = 'me@martinsimon.me',
     url = 'https://github.com/barnumbirr/coinmarketcap',
-    project_urls={  # Optional
+    project_urls={
         'Bug Reports': 'https://github.com/barnumbirr/coinmarketcap/issues',
-        'Funding': 'https://github.com/barnumbirr/coinmarketcap#buy-me-a-coffee',
-        'Source': 'https://github.com/barnumbirr/coinmarketcap',
-},
+        'Buy me a coffee': 'https://github.com/barnumbirr/coinmarketcap#buy-me-a-coffee',
+    },
     license = 'Apache v2.0 License',
-    install_requires=['requests==2.18.4', 'requests_cache==0.4.13'],
+    install_requires=[
+    'requests>=2.18.4',
+    'requests_cache>=0.4.13'
+    ],
     keywords = ['cryptocurrency', 'API', 'coinmarketcap','BTC', 'Bitcoin', 'LTC', 'Litecoin', 'XRP', 'Ripple', 'ETH', 'Ethereum '],
     classifiers=[
         'License :: OSI Approved :: Apache Software License',
