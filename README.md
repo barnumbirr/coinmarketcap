@@ -1,3 +1,4 @@
+
 # ![icon](https://raw.githubusercontent.com/barnumbirr/coinmarketcap/master/doc/coinmarketcap.png) coinmarketcap
 
 [![PyPi Version](http://img.shields.io/pypi/v/coinmarketcap.svg)](https://pypi.python.org/pypi/coinmarketcap/)
@@ -70,11 +71,11 @@ This API can currently retrieve the following data from [coinmarketcap.com](http
     - **(string) convert** - return pricing info in terms of another currency.
     Valid fiat currency values are: "AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK", "DKK", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR", "JPY", "KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB", "TRY", "TWD", "ZAR"
     Valid cryptocurrency values are: "BTC", "ETH" "XRP", "LTC", and "BCH"
-
+    - **(string) sort** - return results sorted by [sort]. Possible values are: "id", "rank", "volume_24h", and "percent_change_24h" (default is rank)
 ```python
 >>> from coinmarketcap import Market
 >>> coinmarketcap = Market()
->>> coinmarketcap.ticker(start=0, limit=3, convert='EUR')
+>>> coinmarketcap.ticker(start=0, limit=3, convert='EUR', sort='rank')
 {
     "cached": false,
     "data": {
