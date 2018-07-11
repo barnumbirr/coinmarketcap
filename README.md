@@ -1,7 +1,7 @@
 
 # ![icon](https://raw.githubusercontent.com/barnumbirr/coinmarketcap/master/doc/coinmarketcap.png) coinmarketcap
 
-[![PyPi Version](https://badge.fury.io/py/coinmarketcap.svg)](https://pypi.python.org/pypi/coinmarketcap/)
+[![PyPi Version](http://img.shields.io/pypi/v/coinmarketcap.svg)](https://pypi.python.org/pypi/coinmarketcap/)
 
 **coinmarketcap** is an APACHE licensed library written in Python providing an easy to use wrapper around the [coinmarketcap.com](http://coinmarketcap.com/) API. This library has been tested with Python 2.7.x and Python 3.6.x and uses.
 
