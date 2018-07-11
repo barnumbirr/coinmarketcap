@@ -50,49 +50,10 @@ class Market(object):
 		return response
 
 	def listings(self):
-		"""
-		This endpoint displays all active cryptocurrency listings in one call. Use the
-		"id" field on the Ticker endpoint to query more information on a specific
-		cryptocurrency.
-		"""
-
 		response = self.__request('listings/', params=None)
 		return response
 
 	def ticker(self, currency="", **kwargs):
-		"""
-		This endpoint displays cryptocurrency ticker data in order of rank. The maximum
-		number of results per call is 100. Pagination is possible by using the
-		start and limit parameters.
-
-		GET /ticker/
-
-		Optional parameters:
-	    (int) start - return results from rank [start] and above (default is 1)
-	    (int) limit - return a maximum of [limit] results (default is 100; max is 100)
-		(string) sort - return results sorted by [sort]. Possible values are: "id",
-			"rank", "volume_24h", and "percent_change_24h" (default is rank)
-		(string) structure - specify the structure for the main data field. Possible
-			values are dictionary and array (default is dictionary).
-		(string) convert - return pricing info in terms of another currency.
-		    Valid fiat currency values are: "AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK",
-		    "DKK", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR", "JPY", "KRW", "MXN",
-		    "MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB", "TRY",
-		    "TWD", "ZAR"
-		    Valid cryptocurrency values are: "BTC", "ETH" "XRP", "LTC", and "BCH"
-
-		GET /ticker/{id}
-
-		Optional parameters:
-			(string) structure - specify the structure for the main data field. Possible
-				values are dictionary and array (default is dictionary).
-			(string) convert - return pricing info in terms of another currency.
-		    	Valid fiat currency values are: "AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK",
-		    	"DKK", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR", "JPY", "KRW", "MXN",
-		    	"MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB", "TRY",
-		    	"TWD", "ZAR"
-		    	Valid cryptocurrency values are: "BTC", "ETH" "XRP", "LTC", and "BCH"
-		"""
 
 		params = {}
 		params.update(kwargs)
@@ -105,17 +66,6 @@ class Market(object):
 		return response
 
 	def stats(self, **kwargs):
-		"""
-		This endpoint displays the global data found at the top of coinmarketcap.com.
-
-		Optional parameters:
-		(string) convert - return pricing info in terms of another currency.
-		Valid fiat currency values are: "AUD", "BRL", "CAD", "CHF", "CLP", "CNY", "CZK",
-		"DKK", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR", "JPY", "KRW", "MXN",
-		"MYR", "NOK", "NZD", "PHP", "PKR", "PLN", "RUB", "SEK", "SGD", "THB", "TRY",
-		"TWD", "ZAR"
-		Valid cryptocurrency values are: "BTC", "ETH" "XRP", "LTC", and "BCH"
-		"""
 
 		params = {}
 		params.update(kwargs)
