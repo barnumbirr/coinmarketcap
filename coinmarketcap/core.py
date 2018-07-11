@@ -41,6 +41,9 @@ class Market(object):
 			if isinstance(response, dict) and response_object.status_code == 200:
 				response[u'cached'] = response_object.from_cache
 
+		# rate limiting is detected when the API gives a 200 status code and the response can't be decoded as JSON
+		except json.decoder.JSONDecodeError as jsonError:
+			return ("Error: This IP address is being rate limited. Wait a few minutes and make sure you aren't exceeding the 30 calls/minute limit")
 		except Exception as e:
 			return e
 
