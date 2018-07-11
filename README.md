@@ -266,6 +266,7 @@ This API can currently retrieve the following data from [coinmarketcap.com](http
 
 ## License:
 
+
 ```
 Copyright 2014-2018 Martin Simon
 
