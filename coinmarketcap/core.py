@@ -15,16 +15,17 @@ class Market(object):
 	__DEFAULT_TIMEOUT = 30
 	__TEMPDIR_CACHE = True
 
-	def __init__(self, base_url = __DEFAULT_BASE_URL, request_timeout = __DEFAULT_TIMEOUT, tempdir_cache = __TEMPDIR_CACHE):
+	def __init__(self, base_url = __DEFAULT_BASE_URL, request_timeout = __DEFAULT_TIMEOUT, tempdir_cache = __TEMPDIR_CACHE, cache_expire_after=120):
 		self.base_url = base_url
 		self.request_timeout = request_timeout
 		self.cache_filename = 'coinmarketcap_cache'
 		self.cache_name = os.path.join(tempfile.gettempdir(), self.cache_filename) if tempdir_cache else self.cache_filename
+		self.cache_expire_after = cache_expire_after
 
 	@property
 	def session(self):
 		if not self._session:
-			self._session = requests_cache.core.CachedSession(cache_name=self.cache_name, backend='sqlite', expire_after=120)
+			self._session = requests_cache.core.CachedSession(cache_name=self.cache_name, backend='sqlite', expire_after=self.cache_expire_after)
 			self._session.headers.update({'Content-Type': 'application/json'})
 			self._session.headers.update({'User-agent': 'coinmarketcap - python wrapper around \
 			                             coinmarketcap.com (github.com/barnumbirr/coinmarketcap)'})
