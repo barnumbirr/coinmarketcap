@@ -17,9 +17,9 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name = 'coinmarketcap',
-    packages = ['coinmarketcap'],
-    version = '5.0.3',
+    name = 'coinmarketcap_with_cache',
+    packages = ['coinmarketcap_with_cache'],
+    version = '5.0.5',
     description = 'Python wrapper around the coinmarketcap.com API.',
     author = 'Martin Simon',
     author_email = 'me@martinsimon.me',
