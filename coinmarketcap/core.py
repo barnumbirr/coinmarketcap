@@ -71,7 +71,7 @@ class Market(object):
         """
         params = {}
         params.update(kwargs)
-        response = self.__request('cryptocurrency/listings/latest', params=None)
+        response = self.__request('cryptocurrency/listings/latest', params=params)
         return response
 
     def ticker(self, **kwargs):
@@ -94,7 +94,7 @@ class Market(object):
 
         params = {}
         params.update(kwargs)
-        response = self.__request('cryptocurrency/quotes/latest' + params)
+        response = self.__request('cryptocurrency/quotes/latest', params=params)
         return response
 
     def stats(self, **kwargs):
@@ -110,5 +110,5 @@ class Market(object):
 
         params = {}
         params.update(kwargs)
-        response = self.__request('global-metrics/quotes/latest', params)
+        response = self.__request('global-metrics/quotes/latest', params=params)
         return response
