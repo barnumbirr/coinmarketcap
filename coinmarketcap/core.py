@@ -10,7 +10,7 @@ import requests_cache
 class Market(object):
 
     _session = None
-    __DEFAULT_BASE_URL = 'https://sandbox-api.coinmarketcap.com/v1/'
+    __DEFAULT_BASE_URL = 'https://pro-api.coinmarketcap.com/v1/'
     __DEFAULT_TIMEOUT = 30
     __TEMPDIR_CACHE = True
 
@@ -59,7 +59,7 @@ class Market(object):
         (int) limit - return a maximum of [limit] results (default is 100; max is 5000)
         (string) convert - return pricing info in terms of another currency.
                            See available conversions here:
-                           https://sandbox.coinmarketcap.com/api/v1/#section/Standards-and-Conventions
+                           https://coinmarketcap.com/api/v1/#section/Standards-and-Conventions
         (string) sort - sorts the list of cryptocurrencies by the following options:
                         "market_cap", "name", "symbol", "date_added", "market_cap", "price",
                         "circulating_supply", "total_supply", "max_supply", "num_market_pairs",
@@ -89,7 +89,7 @@ class Market(object):
         Optional parameters:
         (string) convert - return pricing info in terms of another currency.
                            See available conversions here:
-                           https://sandbox.coinmarketcap.com/api/v1/#section/Standards-and-Conventions
+                           https://coinmarketcap.com/api/v1/#section/Standards-and-Conventions
         """
 
         params = {}
@@ -105,7 +105,7 @@ class Market(object):
         Optional parameters:
         (string) convert - return pricing info in terms of another currency.
                            See available conversions here:
-                           https://sandbox.coinmarketcap.com/api/v1/#section/Standards-and-Conventions
+                           https://coinmarketcap.com/api/v1/#section/Standards-and-Conventions
         """
 
         params = {}
