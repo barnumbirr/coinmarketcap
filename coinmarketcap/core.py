@@ -3,6 +3,7 @@
 
 import os
 import sys
+import decimal
 import json
 import requests
 import tempfile
@@ -34,7 +35,7 @@ class Market(object):
 		response_object = self.session.get(self.base_url + endpoint, params = params, timeout = self.request_timeout)
 
 		try:
-			response = json.loads(response_object.text)
+			response = json.loads(response_object.text, parse_float=decimal.Decimal)
 
 			if isinstance(response, list) and response_object.status_code == 200:
 				response = [dict(item, **{u'cached':response_object.from_cache}) for item in response]
